@@ -1,7 +1,7 @@
-
 body {
     background-color: rgb(233, 233, 233);
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
 * {
@@ -39,32 +39,23 @@ p{
     animation: fadeSlideDown 1.1s ease forwards;
 }
 
-#gears {
-    font-size: 555px;
-    opacity: 0.5;
-    transform: rotate(0.9turn);
-}
-
 .code-background {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 25%;
+    left: 30%;
     width: 100%;
     height: 100%;
-    color: limegreen;
-    font-family: 'Courier New', monospace;
-    font-size: 18px;
     white-space: pre-wrap;
     padding: 40px;
+    opacity: 0.3;
 }
 
-.class-gears{
-    position: absolute;
-    top: 43%;
-    transform: translate(45%, -50%);
-    right: 10%;
-    color: #c2c2c2;
-    margin-right: 300px;
+#code-animation {
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    margin-left: 25%;
+    z-index: 0;
 }
 
 #nav-menu {
@@ -192,7 +183,7 @@ p{
 }
 
 .main-div div {
-    padding: 0 7vw;
+    padding: 0 4vw;
 }
 
 .main-div p {
