@@ -192,6 +192,18 @@ p{
     line-height: 1.6;
 }
 
+.main-div p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 1s ease forwards 0.5s;
+}
+
+.main-div h1 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 0.8s ease forwards;
+}
+
 .content{
     width: 100%;
     background-color:#e1e1e1;
@@ -234,22 +246,106 @@ p{
     background: #b7b7b7;
 }
 
-.main-div p {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeSlideUp 1s ease forwards 0.5s;
-}
-
-.main-div h1 {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeSlideUp 0.8s ease forwards;
-}
-
 .projects{
     width: 100%;
     height: 100vh;
     background-color: #dadada;
+}
+
+.projects h1{
+    align-items: center;
+    display: flex;
+    position: absolute;
+    font-size: 35px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 0.8s ease forwards;
+    left: 44%;
+    margin-top: 85px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 12rem 7rem;
+}
+
+.project-card {
+    background: rgb(241, 241, 241);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(226, 226, 226, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img{
+    width: 100%;
+    height: 200px;
+    opacity: 0.85;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.project-content p {
+    color: #000000;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #e3e3e3;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #007aff;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
 }
 
 footer {
