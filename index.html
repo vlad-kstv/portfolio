@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="nav-menu">
+        <div id="nav-text">
+            <div class="my-img">
+                <img src="myIcon.png">
+            </div>
+            <div class="nav-bar">
+                <p onclick="scrollToSection('2')">Projecten</p>
+                <p onclick="scrollToSection('1')" id="mij">Over mij</p>
+                <p onclick="scrollToSection('3')">Contact</p>
+            </div>
+            <div class="socials">
+                <a href="https://github.com/MoR1uSs" target="_blank"><img src="github.png" class="images"></a>
+                <a href="mailto:vlad.kustov07@gmail.com"><img src="mail-1.png" id="gmail-img"></a>
+                <a href="https://nl.linkedin.com/" target="_blank"><img src="linkedin.png" id="linked-img"></a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="1">
+        <div class="main-div">
+            <div class="code-background">
+                <!-- <p id="code-animation"></p> -->
+            </div>  
+            <div class="content-wrapper">
+                <div id="name">
+                    <h1>Vlad Kustov</h1>
+                </div>
+                <div class="welcome-text">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>Mijn naam is Vlad en ik ben 17. Ik ben geboren in Oekraïne, ik woon in Nederland al 3 jaar.
+                       Ik studeer nu op de eerste jaar in Scalda voor Software Developer. Ik heb deze studie gekozen omdat
+                       ik programmeren erg leuk en interessant vind. Ik geniet ervan om code te schrijven en nieuwe technologieën
+                       te ontdekken. Ik ben nu bezig met leren van Java, Html en Javascript. In de toekomst wil ik graag Full-stack
+                       Developer worden, zodat ik zowel aan de frontend als de backend applicaties kan werken. Mijn sterke kanten zijn
+                       behulpzaamheid, zelfstandigheid en flexibiliteit. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="projects" id="2">
+            <p></p>
+        </div>
+        <div class="content" id="3">
+            <form class="contact-form">
+                <h2>Contact Me</h2>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Portfolio. All rights reserved.</p>
+    </footer>
+    <div id="dev-icons">
+        <i class="devicon-html5-plain"></i>
+        <i class="devicon-css3-plain"></i>
+        <i class="devicon-javascript-plain"></i>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
