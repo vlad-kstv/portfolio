@@ -7,7 +7,7 @@ function scrollToSection(sectionId) {
 document.addEventListener("DOMContentLoaded", function () {
     const codeAnimation = document.getElementById("code-animation");
 
-        const javaCode = `public class HelloWorld {
+    const javaCode = `public class HelloWorld {
     public static void main(String[] args) {
         Greetings();
     }
