@@ -56,6 +56,7 @@ p{
     font-size: 16px;
     margin-left: 25%;
     z-index: 0;
+    user-select: none;
 }
 
 #nav-menu {
@@ -99,6 +100,7 @@ p{
 
 #cijfers{
     font-size: 10px;
+    margin-top: 1px;
 }
 
 .cijfers-div {
@@ -323,6 +325,13 @@ p{
     animation: fadeIn 1.3s ease forwards;
 }
 
+.contact-form h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -370,7 +379,7 @@ p{
     transform: translateY(30px);
     animation: fadeSlideUp 0.8s ease forwards;
     left: 44%;
-    margin-top: 85px;
+    margin-top: 125px;
 }
 
 .projects-grid {
