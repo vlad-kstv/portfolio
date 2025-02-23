@@ -111,21 +111,115 @@ p{
     display: none; /* Hide by default */
 }
 
-@media (max-width: 600px) {
-    .hamburger-menu {
-        display: block; /* Show on mobile */
-    }
+/* Base styles (Desktop or large screens) */
+body {
+    background-color: rgb(233, 233, 233);
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
 
+.nav-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 52%;
+    transform: translateX(-60%);
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    /* Nav-bar adjustments */
     .nav-bar {
-        display: none; /* Hide regular nav items */
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column;
+        position: relative;
+        transform: none;
+        gap: 15px;
     }
 
-    .nav-bar.active {
-        display: flex; /* Show nav items when menu is active */
+    /* Content-wrapper adjustments */
+    .content-wrapper {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Reduce padding for containers */
+    .grades-container {
+        padding: 1rem;
+    }
+
+    /* Welcome text adjustments */
+    .welcome-text {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Adjust logo size in nav */
+    .my-img img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Adjust social icons in nav */
+    .socials {
+        width: 80px;
+        justify-content: space-between;
+    }
+
+    .images, #gmail-img, #linked-img {
+        height: 25px;
+        width: 25px;
+    }
+
+    /* Project grid adjustments */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Project cards */
+    .project-card {
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    /* Grades grid adjustments */
+    .grades-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Form adjustments */
+    .contact-form input, .contact-form textarea, .contact-form button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 14px;
     }
 }
 
+@media (max-width: 480px) {
+    /* Adjust for very small screens like phones in portrait mode */
+    .nav-bar p {
+        font-size: 14px;
+    }
+
+    .project-card h3 {
+        font-size: 16px;
+    }
+
+    .content-wrapper h1 {
+        font-size: 24px;
+    }
+
+    .socials {
+        width: 60px;
+    }
+}
 .flags img {
     width: 30px;  /* Set your desired width */
     height: 30px; /* Set your desired height */
@@ -261,7 +355,7 @@ p{
 }
 
 .images, #gmail-img, #linked-img {
-    transition: transform 0.3s ease; /* transition */
+    transition: transform 0.3s ease; 
     animation: fadeIn 1.1s ease forwards;
 }
 
@@ -493,6 +587,7 @@ footer p{
     color:#717171;
     opacity: 0.4;
 }
+
 
 @keyframes fadeSlideUp {
     0% {
