@@ -20,11 +20,7 @@ p{
 }
 
 .welcome-text{
-    width: 900px;
-}
-
-.welcome-text p{
-    margin-top: 10px;
+    width: min(90%, 800px);
 }
 
 .content-wrapper {
@@ -44,7 +40,6 @@ p{
     top: 25%;
     left: 30%;
     width: 100%;
-    height: 100%;
     white-space: pre-wrap;
     padding: 40px;
     opacity: 0.3;
@@ -60,12 +55,12 @@ p{
 }
 
 #nav-menu {
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 70px;
+    padding: 2rem;
     background-color: black;
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -73,45 +68,22 @@ p{
 }
 
 #nav-text {
-    color: white;
-    display: flex;
-    align-items: center;    
-    justify-content: space-between;
-    padding: 0 40px;
-    height: 100%;
-}
-
-.nav-bar {
-    display: flex;
-    align-items: center;
     position: absolute;
     left: 50%;
-    transform: translateX(-60%);
-    gap: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .cijfers-div {
     width: 100%;
-    min-height: 100vh;
     background-color: #e8e8e8;
     padding: 2rem;
 }
 
-.flags {
-    display: flex;
-    position: fixed;
-    top: 92%;
-    left: 94%;
-    padding: 10px;
-    gap: 10px; /* Space between flags */
-}
 
-/* CSS for the Hamburger Menu */
-.hamburger-menu {
-    display: none; /* Hide by default */
-}
-
-/* Base styles (Desktop or large screens) */
 body {
     background-color: rgb(233, 233, 233);
     font-family: 'Raleway', sans-serif;
@@ -121,109 +93,9 @@ body {
 .nav-bar {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 52%;
-    transform: translateX(-60%);
-    gap: 40px;
-}
-
-@media (max-width: 768px) {
-    /* Nav-bar adjustments */
-    .nav-bar {
-        flex-direction: column;
-        position: relative;
-        transform: none;
-        gap: 15px;
-    }
-
-    /* Content-wrapper adjustments */
-    .content-wrapper {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    /* Reduce padding for containers */
-    .grades-container {
-        padding: 1rem;
-    }
-
-    /* Welcome text adjustments */
-    .welcome-text {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    /* Adjust logo size in nav */
-    .my-img img {
-        width: 35px;
-        height: 35px;
-    }
-
-    /* Adjust social icons in nav */
-    .socials {
-        width: 80px;
-        justify-content: space-between;
-    }
-
-    .images, #gmail-img, #linked-img {
-        height: 25px;
-        width: 25px;
-    }
-
-    /* Project grid adjustments */
-    .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    /* Project cards */
-    .project-card {
-        padding: 1rem;
-        font-size: 14px;
-    }
-
-    /* Grades grid adjustments */
-    .grades-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    /* Form adjustments */
-    .contact-form input, .contact-form textarea, .contact-form button {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    /* Footer adjustments */
-    footer {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Adjust for very small screens like phones in portrait mode */
-    .nav-bar p {
-        font-size: 14px;
-    }
-
-    .project-card h3 {
-        font-size: 16px;
-    }
-
-    .content-wrapper h1 {
-        font-size: 24px;
-    }
-
-    .socials {
-        width: 60px;
-    }
-}
-.flags img {
-    width: 30px;  /* Set your desired width */
-    height: 30px; /* Set your desired height */
-    opacity: 0.8;
+    position: static;
+    transform: none;
+    gap: 20px;
 }
 
 .cijfers-div h1 {
@@ -236,9 +108,9 @@ body {
 }
 
 .grades-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem;
 }
 
 .grades-grid {
@@ -250,7 +122,7 @@ body {
 }
 
 .grade-card {
-    background: rgb(241, 241, 241);
+    background: rgb(245, 245, 245);
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
@@ -290,8 +162,8 @@ body {
     font-size: 0.9rem;
 }
 .nav-bar p {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     position: relative;
@@ -325,14 +197,13 @@ body {
 }
 
 .my-img {
-    margin-right: auto;
-    animation: fadeIn 1.0s ease forwards;
+    margin-right: 20px;
 }
 
-.socials{
-    width: 100px;
-    align-items: center;
-    display: flex;
+.socials {
+    margin-left: auto;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
 .images{
@@ -374,9 +245,10 @@ body {
 }
 
 .main-div {
-    height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #333;
 }
 
@@ -407,7 +279,6 @@ body {
 }
 
 .content{
-    width: 100%;
     background-color:#e1e1e1;
 }
 
@@ -416,11 +287,15 @@ body {
 }
 
 .contact-form {
-    padding: 25px;
-    margin-left: 20%;
-    width: 900px;
+    width: min(90%, 800px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transform: translateY(30px);
     animation: fadeIn 1.3s ease forwards;
+    padding: 2rem;
 }
 
 .contact-form h2{
@@ -463,7 +338,6 @@ body {
 
 .projects{
     width: 100%;
-    height: 100vh;    
     background-color: #dadada;
 }
 
@@ -489,18 +363,16 @@ body {
 }
 
 .project-card {
-    background: rgb(235, 235, 235);
+    background: rgb(250, 250, 250);
     border-radius: 12px;
+    border-bottom: #a9a9a9 solid;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 1;
 }
-
-@media (min-width: 1200px) {
-    .undercards {
-        grid-column: span 2;
-    }
+.project-card img{
+    border-bottom: #dedede solid;
 }
 
 .project-card:hover {
@@ -509,8 +381,6 @@ body {
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -518,13 +388,8 @@ body {
 
 .project-image img{
     width: 100%;
-    height: 233px;
     opacity: 0.85;
     margin-bottom: 10px;
-}
-
-#bank img {
-    width: 100%;
 }
 
 .project-content {
